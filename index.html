@@ -1,0 +1,59 @@
+var fillr1 = 0;
+var fillg1 = 0;
+var fillb1 = 0;
+var timeThingymaBobber = -100;
+var timeAdded = 15;
+var time = 0;
+draw = function(){
+    time += 0.015;
+        background(255, 255, 255);
+    timeThingymaBobber += 1;
+    
+    if(timeThingymaBobber > 0){
+        fillr1 = 255;
+        fillg1 = 0;
+        fillb1 = 0;
+    }
+    if((timeThingymaBobber > 100)&& fillr1 === 255 && fillg1 === 0){
+        fillr1 = 255;
+        fillg1 = 165;
+        fillb1 = 0;
+    }
+    if((timeThingymaBobber > 200)&& fillr1 === 255 && fillg1 === 165){
+        fillr1 = 255;
+        fillg1 = 255;
+        fillb1 = 0;
+    }
+    if((timeThingymaBobber > 300)&& fillr1 === 255 && fillg1 === 255){
+        fillr1 = 0;
+        fillg1 = 255;
+        fillb1 = 0;
+    }
+    if((timeThingymaBobber > 400)&& fillr1 === 0 && fillg1 === 255){
+        fillr1 = 0;
+        fillg1 = 0;
+        fillb1 = 255;
+    }
+    if((timeThingymaBobber > 500)&& fillr1 === 0 && fillb1 === 255){
+        fillr1 = 128;
+        fillg1 = 0;
+        fillb1 = 128;
+    }
+    if((600 < timeThingymaBobber < 700)&& fillr1 === 128 && fillg1 === 0){
+        timeThingymaBobber = 1;
+    }
+    if(timeThingymaBobber < 700){
+    if(timeThingymaBobber > 0){
+    timeThingymaBobber += timeAdded;
+    }
+   
+    }
+if(time > 5){
+    textSize(50);
+    text("12", width/2-34, height/2+46);
+}
+
+fill(fillr1, fillg1, fillb1);
+textSize(30);
+text("Happy Birthday Alex!", width/2-147, height/2-9);
+};
